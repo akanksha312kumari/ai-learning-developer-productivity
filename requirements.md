@@ -1,84 +1,69 @@
 # StudyBee – Requirements Document
 
 ## 1. Overview
-StudyBee is an AI-powered Chrome Extension designed to help students study smarter by automatically tracking browser activity, identifying learning vs distraction patterns, and providing AI-driven feedback, motivation, and competitive insights.
+StudyBee is an AI-powered learning and productivity analytics platform designed to help students and developers improve focus, consistency, and learning efficiency by intelligently distinguishing productive activity from distraction.
 
-The system focuses on awareness, habit-building, and motivation rather than restriction or blocking.
+The system uses AI-based behavior classification, focus scoring, and generative insights to encourage deep work rather than enforcing restrictions.
 
 ---
 
 ## 2. Functional Requirements
 
-### 2.1 Browser Activity Tracking
-- Track active browser tabs in real time
-- Identify website domains and page titles
-- Maintain last 7 days of activity data locally
+### 2.1 User Activity Tracking
+- Track browser activity in real time via a Chrome extension
+- Capture active tabs, session duration, and usage patterns
+- Securely transmit activity data to the backend
 
-### 2.2 Activity Classification
-- Classify browsing activity into:
-  - Learning
+### 2.2 AI-Based Behavior Classification
+- Classify activity into:
+  - Learning / Deep Work
   - Distraction
-  - Mixed
-- Use:
-  - Predefined learning & distraction domains
-  - Keyword-based title analysis
+  - Mixed State
+- Perform classification continuously during sessions
 
-### 2.3 Focus Score & Productivity Metrics
-- Calculate focus score based on learning vs distraction ratio
-- Track daily productivity trends
-- Maintain rank-based performance metrics
+### 2.3 Focus Scoring & Streaks
+- Generate a daily and session-based Focus Score
+- Maintain consistency streaks based on productive behavior
+- Update scores in real time
 
-### 2.4 AI-Powered Study Coach
-- Generate daily AI motivation messages
-- Provide AI-based guidance through Study Coach chat
-- Generate weekly AI reflections summarizing performance
+### 2.4 AI Study Coach & Insights
+- Generate AI-based reflections and motivation summaries
+- Explain productivity drops and suggest improvements
+- Provide daily and weekly analytics
 
-### 2.5 Weekly AI Reflection & Analytics
-- Compare learning vs distraction visually
-- Identify best focus hours
-- Suggest ideal study timings
-- Summarize weekly performance in natural language
+### 2.5 Gamification & Competition
+- Reward users with points and profile levels
+- Enable private study rooms
+- Maintain a global leaderboard
 
-### 2.6 Competition & Leaderboards
-- Allow users to create or join groups using a unique code
-- Rank users based on focus score
-- Track Rank #1 streaks
-- Enable gamified point-based competition
-
-### 2.7 Notification System
-- Notify users when distraction time exceeds learning time
-- Repeat notifications every 30 minutes while distraction dominates
-
-### 2.8 Backend & Sync
-- Sync local activity data with backend securely
-- Manage users, groups, and leaderboard data
-- Generate AI insights using Gemini API
+### 2.6 Dashboard & Visualization
+- Display focus trends and productivity insights
+- Visualize analytics using charts and summaries
 
 ---
 
 ## 3. Non-Functional Requirements
 
 ### 3.1 Performance
-- Real-time tracking with minimal resource usage
-- Smooth extension performance without browser slowdown
+- Real-time data processing with minimal latency
+- Scalable backend to support user growth
 
-### 3.2 Privacy & Security
-- No tracking of personal content
-- Activity stored locally before secure backend sync
-- Privacy-first architecture
+### 3.2 Security & Privacy
+- No collection of sensitive personal data
+- Secure API communication
+- Privacy-first design
 
 ### 3.3 Scalability
-- Support multiple users and groups
-- Backend designed for global access and growth
+- Modular architecture
+- Independent scaling of AI and backend services
 
 ### 3.4 Usability
-- Clean, intuitive popup UI
-- Minimal user configuration
-- Clear visual feedback and insights
+- Simple and distraction-free UI
+- Supportive feedback instead of strict blocking
 
 ---
 
 ## 4. Assumptions & Constraints
-- Users use a Chromium-based browser
-- Backend is hosted and publicly accessible
-- Initial focus is on students; system is extensible
+- Users have access to a Chromium-based browser
+- Initial deployment targets students and developers
+- AI insights rely on usage patterns, not content inspection
