@@ -19,6 +19,7 @@ StudyBee intelligently classifies online activity into learning, distraction, an
 ## ✨ Key Features
 - Real-time activity tracking (Chrome Extension)
 - AI-based learning vs distraction classification
+- Notification alerts when distration exceeds learning.
 - Focus score and productivity streaks
 - AI study coach with reflections and motivation
 - Rewards, levels, and habit tracking
